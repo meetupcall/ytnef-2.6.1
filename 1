@@ -1,0 +1,27 @@
+diff -r -c -x configure ytnef-2.6/configure.ac modified-ytnef-2.6/configure.ac
+*** ytnef-2.6/configure.ac	2004-09-14 10:20:42.000000000 -0700
+--- modified-ytnef-2.6/configure.ac	2010-01-20 09:58:40.000000000 -0800
+***************
+*** 1,6 ****
+--- 1,21 ----
+  # Process this file with autoconf to produce a configure script.
+  AC_INIT(ytnef, 2.6, yerase@yeraze.com)
+  AM_INIT_AUTOMAKE
++ 
++ if test "x$prefix" != "xNONE"; then
++   if test "x$LDFLAGS" = "x"; then
++     LDFLAGS="-L${prefix}/lib"
++   else
++     LDFLAGS="${LDFLAGS} -L${prefix}/lib"
++   fi
++ 
++   if test "x$CPPFLAGS" = "x"; then
++     CPPFLAGS="-I${prefix}/include"
++   else
++     CPPFLAGS="${CPPFLAGS} -I${prefix}/include"
++   fi
++ fi
++ 
+  AC_CONFIG_SRCDIR([src/ytnef/main.c])
+  AC_CONFIG_HEADER([config.h])
+  
