@@ -38,10 +38,10 @@ pkglibdir = $(libdir)/ytnef
 pkgincludedir = $(includedir)/ytnef
 top_builddir = ..
 
-ACLOCAL = ${SHELL} /vagrant/ytnef-2.6/missing --run aclocal-1.6
-AUTOCONF = ${SHELL} /vagrant/ytnef-2.6/missing --run autoconf
-AUTOMAKE = ${SHELL} /vagrant/ytnef-2.6/missing --run automake-1.6
-AUTOHEADER = ${SHELL} /vagrant/ytnef-2.6/missing --run autoheader
+ACLOCAL = ${SHELL} /vagrant/ytnef-2.6.1/missing --run aclocal-1.6
+AUTOCONF = ${SHELL} /vagrant/ytnef-2.6.1/missing --run autoconf
+AUTOMAKE = ${SHELL} /vagrant/ytnef-2.6.1/missing --run automake-1.6
+AUTOHEADER = ${SHELL} /vagrant/ytnef-2.6.1/missing --run autoheader
 
 am__cd = CDPATH="$${ZSH_VERSION+.}$(PATH_SEPARATOR)" && cd
 INSTALL = /usr/bin/install -c
@@ -63,7 +63,7 @@ POST_UNINSTALL = :
 EXEEXT = 
 OBJEXT = o
 PATH_SEPARATOR = :
-AMTAR = ${SHELL} /vagrant/ytnef-2.6/missing --run tar
+AMTAR = ${SHELL} /vagrant/ytnef-2.6.1/missing --run tar
 AWK = mawk
 CC = gcc
 DEPDIR = .deps
@@ -73,7 +73,7 @@ STRIP =
 VERSION = 2.6
 am__include = include
 am__quote = 
-install_sh = /vagrant/ytnef-2.6/install-sh
+install_sh = /vagrant/ytnef-2.6.1/install-sh
 SUBDIRS = ytnef ytnefprint
 subdir = src
 mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs

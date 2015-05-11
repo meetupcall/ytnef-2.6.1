@@ -152,6 +152,10 @@ void ProcessTNEF(TNEFStruct TNEF) {
             SaveNewVCalendar(TNEF);
             foundCal = 1;
         }
+        if (strcmp(TNEF.messageClass, "IPM.Microsoft Schedule.MtgCncl") == 0) {
+            SaveNewVCalendar(TNEF);
+            foundCal = 1;
+        }
     }
 
 
